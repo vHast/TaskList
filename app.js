@@ -10,12 +10,11 @@ const taskInput = document.querySelector('#task');
 
 loadEventListeners();
 
-
 //Load all event listeners
 
 function loadEventListeners() {
   //Add task event
-  form.addEventListenerListener('submit', addTask);
+  form.addEventListener('submit', addTask);
 }
 
 // Add Task
@@ -32,7 +31,7 @@ function addTask(e) {
   li.className = 'collection-item';
   // Create text from the value of taskInput node and append to li
 
-  li.appendChild(document.greateTextNode(taskInput.value));
+  li.appendChild(document.createTextNode(taskInput.value));
   // Create new link element
   const link = document.createElement('a');
   // Add class
